@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Produto;
 use Illuminate\Http\Request;
 
-class ProdutoController extends Controller
+use App\Interfaces\ProductControllerInterface;
+
+class ProdutoController extends Controller implements ProductControllerInterface
 {
     // Listar todos os produtos
     public function index() {
